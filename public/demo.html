@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>vue</title>
+</head>
+<div class="container">
+    <input type="number" id="roomId" name="roomId" placeholder="roomId" required>
+    <input type="text" id="userId" name="userId" placeholder="userId" required>
+    <input type="text" id="userSig" name="userSig" placeholder="userSig" required>
+    <button type="button" id="startCall">start</button>
+    <button type="button" id="finishCall">end</button>
+    <button type="button" id="shutdown_mic"> pause</button>
+    <button type="button" id="turnon_mic"> continue</button>
+</div>
+<div id="localStreamContainer"></div>
+<div id="remoteStreamContainer"></div>
+<script type="module" src="./src/demo.js"> </script> 
+<style>  
+    #localStreamContainer { 
+        width: 1%;
+        height: 1%;
+    }
+    #remoteStreamContainer {
+        width: 1%;
+        height: 1%;
+    }
+</style>
+</html>
