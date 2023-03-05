@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Lei Shi">
+    <meta http-equiv="Cache-Control" content="o-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="csrf-token" content="1483780974##87f89328c5616669f00302a263fe9061bb852818">
+
+
+    <title>新闻阅读</title>
+    <!-- 引入jQuery -->
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <style>
+        .img-fluid{
+            left: 500px;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+        $.ajax({
+            url: "titles/9.txt",
+            type: "GET",
+            dataType: "text",
+            success: function (data) {
+                $("#title").text(data);
+            },
+            error: function (jqXHR, status, thrown) {
+                alert(thrown);
+            }
+        });
+        $.ajax({
+            url: "news/9.txt",
+            type: "GET",
+            dataType: "text",
+            success: function (data) {
+                $("#news").text(data);
+            },
+            error: function (jqXHR, status, thrown) {
+                alert(thrown);
+            }
+        });
+    </script>
+    <meta content="" name="author">
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="../static/font-awesome//4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/highlight.js/9.8.0/monokai-sublime.min.css">
+    <link rel="stylesheet" href="../app/css/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../app/css/libs/katex/0.6.0/katex.min.css">
+    <link rel="stylesheet" href="../app/css/libs/videojs/5.11.7/video-js.min.css">
+    <link rel="stylesheet" href="../app/css/dest/styles.css?=2016121272249">
+
+</head>
+
+<body>
+<div class="vip-header" style="min-height:800px;margin-left: 200px;margin-right: 200px">
+    <a class="container-title"style="text-decoration:none">
+        <pre id="title" style="font-family: Cooper Black;font-size: 25px;line-height: 2;word-break: keep-all;white-space: pre-wrap;word-wrap: break-word;text-align: center"></pre>
+        <img src="image/9.jpg" class="img-fluid" style="verticle-align: middle">
+        <pre id="news" style="font-family: 华文新魏;font-size: 18px;line-height: 2;white-space: pre-wrap;word-break: keep-all;word-wrap: break-word;text-align: justify"></pre>
+    </a>
+
+
+    <nav class="pagination-container">
+        <ul class="pagination">
+
+            <li class="">
+                <a href="news8.html" aria-label="Previous">
+                    <span aria-hidden="true">上一页</span>
+                </a>
+            </li>
+
+
+
+            <li class="">
+                <a href="news1.html">1</a>
+            </li>
+
+
+
+            <li class="">
+                <a href="news2.html">2</a>
+            </li>
+
+
+
+            <li class="">
+                <a href="news3.html">3</a>
+            </li>
+
+
+
+            <li class="">
+                <a href="news4.html">4</a>
+            </li>
+
+
+
+            <li class="">
+                <a href="news5.html">5</a>
+            </li>
+
+
+
+            <li class="">
+                <a href='#'>...</a>
+            </li>
+
+
+
+            <li class="active">
+                <a href="news9.html">9</a>
+            </li>
+
+
+
+            <li class="">
+                <a href="news10.html">10</a>
+            </li>
+
+
+
+            <li class="">
+                <a aria-label="Next" href="news10.html">
+                    <span aria-hidden="true">下一页</span>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+</div>
+</body>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-navbar-collapse" aria-expanded="false">
+                <span class="sr-only">ChatGot柴狗</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/logo_03.png">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="header-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="">
+                    <a href="../questions/index.html">讨论区</a>
+                </li>
+                <li class=" bootcamp new-nav logo-1111">
+                    <a href="../bootcamp/index.html">训练营</a>
+
+                </li>
+                <li class=" new-nav logo-1111">
+                    <a href="../vip/index.html">会员</a>
+
+                </li>
+
+            </ul>
+
+
+            <div class="navbar-right btns">
+                <a class="btn btn-default navbar-btn sign-in" data-sign="signin" href="#sign-modal" data-toggle="modal">登录</a>
+                <a class="btn btn-default navbar-btn sign-up" data-sign="signup" href="#sign-modal" data-toggle="modal">注册</a>
+            </div>
+
+
+            <form class="navbar-form navbar-right" action="../search" method="get" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="search" autocomplete="off" placeholder="搜索">
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+<script src="../app/dest/lib/lib.js?=2016121272249"></script>
+<script src="../static/jquery/2.2.4/jquery.min.js"></script>
+<script src="../static/ace/1.2.5/ace.js"></script>
+<script src="../static/aliyun/aliyun-oss-sdk-4.3.0.min.js"></script>
+<script src="../static/highlight.js/9.8.0/highlight.min.js"></script>
+<script src="../static/jspdf/1.2.61/jspdf.min.js"></script>
+<script src="../static/plupload/2.1.9/js/plupload.full.min.js"></script>
+<script src="../static/zeroclipboard/2.2.0/ZeroClipboard.min.js"></script>
+<script src="../static/videojs/video.min.js"></script>
+<script src="../static/bootstrap-tour/0.11.0/js/bootstrap-tour.min.js"></script>
+<script src="../static/bootstrap-table/1.11.0/bootstrap-table.min.js"></script>
+<script src="../static/bootstrap-table/1.11.0/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="../static/bootstrap-table/1.11.0/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
+
+<script src="../static/ravenjs/3.7.0/raven.min.js"></script>
+<script>
+    Raven.config('https://bc3878b7ed0a4468a65390bd79e6e73f@sentry.xxxxxx.com/5', {
+        release: '3.12.13'
+    }).install();
+</script>
+
+
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 clearfix footer-col">
+                <img src="../img/logo_03.png" width="260">
+                <div class="footer-slogan">加入ChatGot，轻松练口语</div>
+                <div class="col-xs-2">
+                    <div class="social-item footer-weixin-item">
+                        <i class="fa fa-weixin"></i>
+                        <div class="footer-weixin">
+                            <img src="../img/footer-weixin.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-2">
+                    <div class="social-item footer-qq-item">
+                        <i class="fa fa-qq"></i>
+                    </div>
+                </div>
+                <div class="col-xs-2">
+                    <div class="social-item footer-weibo-item">
+                        <!--                        <a href="#" target="_blank">-->
+                        <i class="fa fa-weibo"></i>
+                        <!--                        </a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-2 footer-col">
+                <div class="col-title">公司</div>
+                <a href="../aboutus/index.html" target="_blank">关于我们</a><br>
+                <a href="../contact/index.html" target="_blank">联系我们</a><br>
+                <a href="#" target="_blank">加入我们</a><br>
+                <a href="#" target="_blank">技术博客</a><br>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-2 footer-col">
+                <div class="col-title">合作</div>
+                <a href="../contribute/index.html" target="_blank">我要投稿</a><br>
+                <a href="../labs/index.html" target="_blank">教师合作</a><br>
+                <a href="../edu/index.html" target="_blank">高校合作</a><br>
+                <a href="../friends/index.html" target="_blank">友情链接</a>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-2 footer-col">
+                <div class="col-title">服务</div>
+                <a href="../vip/index.html" target="_blank">会员服务</a><br>
+                <a href="../questions/index.html?tag=%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98" target="_blank">常见问题</a><br>
+                <a href="../privacy/index.html" target="_blank">隐私条款</a>
+            </div>
+        </div>
+    </div>
+    <div class="text-center copyright">
+        <span>Copyright @2013-2016 在线教育</span>
+        <span class="ver-line"> | </span>
+        <a href="#" target="_blank">蜀ICP备00000000号</a>
+
+    </div>
+</div>
+</body>
+</html>
