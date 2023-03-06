@@ -23,26 +23,20 @@
 
     <script type="text/javascript">
         $.ajax({
-            url: "titles/1.txt",
-            type: "GET",
+            url: "./titles/1.txt",
+            type: "get",
             dataType: "text",
             success: function (data) {
                 $("#title").text(data);
             },
-            error: function (jqXHR, status, thrown) {
-                alert(thrown);
-            }
         });
         $.ajax({
-            url: "news/1.txt",
-            type: "GET",
+            url: "./news/1.txt",
+            type: "get",
             dataType: "text",
             success: function (data) {
                 $("#news").text(data);
             },
-            error: function (jqXHR, status, thrown) {
-                alert(thrown);
-            }
         });
     </script>
     <meta content="" name="author">

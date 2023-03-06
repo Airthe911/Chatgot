@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Lei Shi">
+    <meta http-equiv="Cache-Control" content="o-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="csrf-token" content="1483780974##87f89328c5616669f00302a263fe9061bb852818">
+
+
+    <title>新闻阅读</title>
+    <!-- 引入jQuery -->
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+
+    <meta content="" name="author">
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="../../static/font-awesome//4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../static/highlight.js/9.8.0/monokai-sublime.min.css">
+    <link rel="stylesheet" href="../../app/css/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../app/css/libs/katex/0.6.0/katex.min.css">
+    <link rel="stylesheet" href="../../app/css/libs/videojs/5.11.7/video-js.min.css">
+    <link rel="stylesheet" href="../../app/css/dest/styles.css?=2016121272249">
+
+</head>
+
+<script>
+    function openShutManager(oSourceObj,oTargeObj,shutAble,oOpenTip,oShutTip){
+        var sourceObj=typeof oSourceObj=="string"?document.getElementById(oSourceObj):oSourceObj;
+        var targeObj=typeof oTargeObj=="string"?document.getElementById(oTargeObj):oTargeObj;
+        var openTip=oOpenTip||"";
+        var shutTip=oShutTip||"";
+        if(targeObj.style.display !="none"){
+            if(shutAble) return;
+            targeObj.style.display="none";
+            if(openTip&&shutTip){
+                sourceObj.innerHTML=shutTip;
+            }
+        }else{
+            targeObj.style.display="block";
+            if(openTip&&shutTip){
+                sourceObj.innerHTML=openTip;
+            }
+        }
+    }
+</script>
+
+<body>
+<div class="vip-header" style="min-height:800px;margin-left: 200px;margin-right: 200px">
+    <div class="line-and-laboratory-2">
+        <div class="container">
+            <div class="clearfix text-center item-header">
+                <span class="line"></span>
+                <span class="text-center item-title" style="font-size: 40px">第一套</span>
+                <span class="line"></span>
+            </div>
+            <audio controls="controls" loop="loop">
+                <source src="cet4160601.mp3" type="audio/mp3"></source>
+            </audio>
+            <pre style="font-size: 18px;line-height: 2;word-break: keep-all;white-space: pre-wrap;word-wrap: break-word;text-align: justify">Section A
+　　Directions： In this section， you will hear three news reports。 At the end of each news report， you will hear two or three questions。 Both the news report and the questions will be spoken only once。 After you hear a question， you must choose the best answer from the four choices marked A）， B）， C） and D）。 Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre。
+　　Questions 1 and 2 are based on the news report you have just heard。
+　　1.A）The International Labor Organization’s key objective。
+　　B）The basic social protection for the most vulnerable。
+　　C）Rising unemployment worldwide。
+　　D）Global economic recovery。
+　　2. A）Many countries have not taken measures to create enough jobs。
+　　B）Few countries know how to address the current economic crisis。
+　　C）Few countries have realized the seriousness of the current crisis。
+　　D）Many countries need support to improve their people’s livelihood。
+　　Questions 3 and 4 are based on the news report you have just heard。
+　　3.A）Serve standardized food nationwide。
+　　B）Put calorie information on the menu。
+　　C）Increase protein content in the food。
+　　D）Offer convenient food to customers。
+　　4. A）They will be fined。
+　　B）They will be closed。
+　　C）They will get a warning。
+　　D）They will lose customers。
+
+　　Questions 5 to 7 are based on the news report you have just heard。
+　　5. A）Inability to implement their business plans。
+　　B）Inability to keep turning out novel products。
+　　C）Lack of a successful business model of their own。
+　　D）Failure to integrate innovation into their business。
+　　6. A）It is the secret to business success。
+　　B）It is the creation of something new。
+　　C）It is a magic tool to bring big rewards。
+　　D）It is an essential part of business culture。
+　　7. A）Its hardworking employees。
+　　B）Its flexible promotion strategy。
+　　C）Its innovation culture。
+　　D）Its willingness to make investments。
+
+　　Section B
+　　Directions： In this section， you will hear two long conversations。 At the end of each conversations you will hear four questions。 Both the conversations and the question-s will be spoken only once。 After you hear a question。 You must choose the best answer from the four choices marked A），B），C）and D）。 Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre。
+　　Questions 8 to 11 are based on the conversation you have just heard。
+　　8. A）He’s got addicted to technology。
+　　B）He is not very good at socializing。
+　　C）He is crazy about text-messaging。
+　　D）He does not talk long on the phone。
+　　9. A）Talk big。
+　　B）Talk at length。
+　　C）Gossip a lot。
+　　D）Forget herself。
+　　10. A）He thought it was cool。
+　　B）He needed the practice。
+　　C）He wanted to stay connected with them。
+　　D）He had an urgent message to send。
+　　11. A）It poses a challenge to seniors。
+　　B）It saves both time and money。
+　　C）It is childish and unprofessional。
+　　D）It is cool and convenient。
+
+　　Questions 12 to 15 are based on the conversation you have just heard。
+　　12. A）He wants to change his job assignment。
+　　B）He is unhappy with his department manager。
+　　C）He thinks he deserves extra pay for overtime。
+　　D）He is often singled out for criticism by his boss。
+　　13. A）His workload was much too heavy。
+　　B）His immediate boss did not trust him。
+　　C）His colleagues often refused to cooperate。
+　　D）His salary was too low for his responsibility。
+　　14. A）He never knows how to refuse。
+　　B）He is always ready to help others。
+　　C）His boss has a lot of trust in him。
+　　D）His boss has no sense of fairness。
+　　15. A）Put all his complaints in writing。
+　　B）Wait and see what happens next。
+　　C）Learn to say no when necessary。
+　　D）Talk to his boss in person first。
+
+　　Section C
+　　Directions： In this section， you will hear three passages。 At the end of each passage， you will hear three or four questions。 Both the passage and the questions will be spoken only once。 After you hear a question， you must choose the best answer from the four choices marked A），B），C）and D）。Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre。
+
+　　Questions 16 to 18 are based on the passage you have just heard。
+　　16. A）The importance of sleep to a healthy life。
+　　B） Reasons for Americans’ decline in sleep。
+　　C）Some tips to improve the quality of sleep。
+　　D）Diseases associated with lack of sleep。
+　　17. A）They are more health-conscious。
+　　B）They are changing their living habits。
+　　C）They get less and less sleep。
+　　D） They know the dangers of lack of sleep。
+　　18. A）Their weight will go down。
+　　B）Their mind function will deteriorate。
+　　C）Their work efficiency will decrease。
+　　D）Their blood pressure will rise。
+
+　　Questions 19 to 21 are based on the passage you have just heard。
+　　19. A）How much you can afford to pay。
+　　B）What course you are going to choose。
+　　C）Which university you are going to apply to。
+　　D）When you are going to submit your application。
+　　20. A）The list of courses studied。
+　　B）The full record of scores。
+　　C）The references from teachers。
+　　D）The personal statement。
+　　21. A）Specify what they would like to do after graduation。
+　　B）Describe in detail how much they would enjoy studying。
+　　C）Indicate they have reflected and thought about the subject。
+　　D）Emphasize that they admire the professors in the university。
+
+　　Questions 22 to 25 are based on the passage you have just heard。
+　　22. A）It was equipped with rubber tyres。
+　　B）It was built in the late 19th century。
+　　C）It was purchased by the Royal family。
+　　D）It was designed by an English engineer。
+　　23. A）They consumed lots of petrol。
+　　B）They took two passengers only。
+　　C）They were difficult to drive。
+　　D）They often broke down。
+　　24. A）They were produced on the assembly line。
+　　B）They were built with less costly materials。
+　　C）They were modeled after British cars。
+　　D）They were made for ordinary use。
+　　25. A）It made news all over the world。
+　　B）It was built for the Royal family。
+　　C）It marked a new era in motor travel。
+　　D）It attracted large numbers of motorists。</pre>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <div class="clearfix text-center item-header">
+                <span class="line"></span>
+                <span class="text-center item-title" style="font-size: 40px">第二套</span>
+                <span class="line"></span>
+            </div>
+            <audio controls="controls" loop="loop">
+                <source src="cet4160602.mp3" type="audio/mp3"></source>
+            </audio>
+            <pre style="font-size: 18px;line-height: 2;word-break: keep-all;white-space: pre-wrap;word-wrap: break-word;text-align: justify">Section A News Report
+Directions： In this section， you will hear three news reports。 At the end of each news report，you will hear two or three questions。 Both the news report and the questions will be spoken only once。 After you hear a question, you must choose the best answer from the four choicesmarked A, B, C and D. Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre.
+Directions: Questions 1 and 2 are based on the news report you have just heard.
+Question 1
+A) How college students can improve their sleep habits.
+B) Why sufficient sleep is important for college students.
+C) Why college students are more likely to have stress problems.
+D) How college students can handle their psychological problems.
+Question 2
+A) It is not easy to improve one's sleep habits.
+B) It is not good for students to play video games.
+C) Students who are better prepared generally get higher scores in examinations.
+D) Making last-minute preparations for tests may be less effective than sleeping.
+Directions: Questions 3 and 4 are based on the news report you have just heard.
+Question 3
+A) Whether more airports should be built around .
+B) Whether adequate investment is being made to improve airport facilities.
+C) Whether the British Airports Authority should sell off some of its assets.
+D) Whether the Spanish company could offer better service.
+Question 4
+A) Inefficient management.
+B) Poor ownership structure.
+C) Lack of innovation and competition.
+D) Lack of runway and terminal capacity.
+Directions: Questions 5 to 7 are based on the news report you have just heard.
+Question 5
+A) Report the nicotine content of their cigarettes.
+B) Set a limit to the production of their cigarettes.
+C) Take steps to reduce nicotine in their products.
+D) Study the effects of nicotine on young smokers.
+Question 6
+A) The biggest increase in nicotine content tended to be in brands young smokers like.
+B) Big tobacco companies were frank with their customers about the hazards of smoking.
+C) Brands which contain higher nicotine content were found to be much more popular.
+D) Tobacco companies refused to discuss the detailed nicotine content of their products.
+Question 7
+A) They promised to reduce the nicotine content in cigarettes.
+B) They have not fully realized the harmful effect of nicotine.
+C) They were not prepared to comment on the cigarette study.
+D) They will pay more attention to the quality of their products.
+Section B Conversation
+Directions： In this section， you will hear two long conversations。 At the end of each conversations you will hear four questions。 Both the conversations and the question-s will bespoken onlyonce. After you hear a question。 Youmust choose the best answer from the four choices marked A,B,C and D. Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre。
+Question 8
+A) Indonesia.
+B) Holand.
+C) Sweden.
+D) England.
+Question 9
+A) Getting a coach who can offer real help.
+B) Talking with her boyfriend in Dutch.
+C) Learning a language where it is not spoken.
+D) Acquiring the necessary ability to socialize.
+Question 10
+A) Listening to language programs on the radio.
+B) Trying to speak it as much as one can.
+C) Making friends with native speakers.
+D) Practicing reading aloud as often as possible.
+Question 11
+A) It creates an environment for socializing.
+B) It offers various courses with credit points.
+C) It trains young people's leadership abilities.
+D) It provides opportunities for language practice.
+Drections: Questions 12 to 15 are based on the conversation you have just heard.
+Question 12
+A) The impact of engine design on road safety.
+B) The role policemen play in traffic safety.
+C) A sense of freedom driving gives.
+D) Rules and regulations for driving.
+Question 13
+A) Make cars with automatic control.
+B) Make cars that have better brakes.
+C) Make cars that are less powerful.
+D) Make cars with higher standards.
+Question 14
+A) They tend to drive responsibly.
+B) They like to go at high speed.
+C) They keep within speed limits.
+D) They follow traffic rules closely.
+Question 15
+A) It is a bad idea.
+B) It is not useful.
+C) It is as effective as speed bumps.
+D) It should be combined with education.
+Section C Passages
+Directions： In this section， you will hear three passages。 At the end of each passage， you will hear three or four questions。 Both the passage and the questions will be spoken only once. After you hear a question， you must choose
+the best answer from the four choices marked A, B, C and D.Then mark thecorresponding letter on Answer Sheet 1 with a single line through the centre。
+Directions:Questions 16 to 18 are based on the passage you have just heard.
+Question 16
+A) The card got damaged.
+B) The card was found invalid.
+C) The card reader failed to do the scanning.
+D) The card reader broke down unexpectedly.
+Question 17
+A) By covering the credit card with a layer of plastic.
+B) By calling the credit card company for confirmation.
+C) By seeking help from the card reader maker Verifone.
+D) By typing the credit card number into the cash register.
+Question 18
+A) Affect the sales of high-tech appliances.
+B) Change the lifestyle of many Americans.
+C) Give birth to many new technological inventions.
+D) Produce many low-tech fixes for high-tech failures.
+Drections: Questions 19 to 21 are based on the passage you have just heard.
+Question 19
+A) They are set by the dean of the graduate school.
+B) They are determined by the advising board.
+C) They leave much room for improvement.
+D) They vary among different departments.
+Question 20
+A) By consulting the examining committee.
+B) By reading the Bulletin of Information.
+C) By contacting the departmental office.
+D) By visiting the university's website.
+Question 21
+A) They specify the number of credits students must earn.
+B) They are harder to meet than those for undergraduates.
+C) They have to be approved by the examining committee.
+D) They are the same among various divisions of the university.
+Drections: Questions 22 to 25 are based on the passage you have just heard.
+Question 22
+A) Students majoring in nutrition.
+B) Students in health classes.
+C) Ph.D. candidates in dieting.
+D) Middle and high school teachers.
+Question 23
+A) Its overestimate of the effect of dieting.
+B) Its mistaken conception of nutrition.
+C) Its changing criteria for beauty.
+D) Its overemphasis on thinness.
+Question 24
+A) To illustrate her point that beauty is but skin deep.
+B) To demonstrate the magic effect of dieting on women.
+C) To explain how computer images can be misleading.
+D) To prove that technology has impacted our culture.
+Question 25
+A) To persuade girls to stop dieting.
+B) To promote her own concept of beauty.
+C) To establish an emotional connection with students.
+D) To help students rid themselves of bad living habits.
+</pre>
+            <button class="btn btn-default navbar-btn sign-up" onclick="openShutManager(this,'show1',false)">点击查看答案</button>
+            <div id="show1" style="text-align: justify; display: none">
+                <span>第一套听力答案:
+                    　　1. C) Rising unemployment worldwide.
+　　2. C) Few countries have realized the seriousness of the current crisis.
+　　3. B) Put calorie information on the menu.
+　　4. A) They will be fined.
+　　5. D) Failure to integrate innovation into their business.
+　　6. B) It is the creation of something new.
+　　7. C) Its innovation culture.
+　　8. D)He does not talk long on the phone.
+　　9. B) talk at length.
+　　10. A) He thought it was cool.
+　　11. C) It is childish and unprofessional.
+　　12. A) He wants to change his job assignment.
+　　13. A) His workload was much too heavy.
+　　14. C) His boss has a lot of trust in him.
+　　15. D) Talk to his boss in person first.
+　　16. A) The importance of sleep to a healthy life
+　　17 .C) They get less and less sleep
+　　18 .D) Their blood pressure will rise
+　　19. B) What course you are going to choose
+　　20. D) The personal statement
+　　21. C)Indicate they have reflected and thought about the subject
+　　22 .B) It was built in the late 19th century.
+　　23 .D) They often broke down.
+　　24 .A) They were produced on the assembly line.
+　　25 .C) It marked a new era in motor travel.<hr></hr>
+                    第二套听力答案：
+　　1. B)Why sufficient sleep is important for college students.
+2. D)Making last-minute preparations for tests may be less effective than
+sleeping.
+3. C)Whether the British Airports Authority should sell off some of its
+assets.
+4. D)Lack of runway and terminal capacity.
+5. A)Report the nicotine content of their cigarettes.
+6. A)The biggest increase in nicotine content tended to be in brands young
+smokers like.
+7. C)They were not prepared to comment on the cigarette study.
+8. B)Holland.
+9. C)Learning a language where it is not spoken.
+10. B)Trying to speak it as much as one can.
+11. D)It provides opportunities for language practice.
+12. D)Rules and regulations for driving.
+13. C)Make cars that are less powerful.
+14. A)They tend to drive responsibly.
+15. B)It is not useful.
+16 C)The card reader failed to do the scanning.
+17 A)By covering the credit card with a layer of plastic.
+18 D)Produce many low-tech fixes for high-tech failures.
+19. D)They vary among different departments.
+20. C)By contacting the departmental office.
+21. A)They specify the number of credits students must earn.
+22 B)Students in health classes.
+23 D)Its overemphasis on thinness.
+24 C)To explain how computer images can be misleading.
+25 A)To persuade girls to stop dieting</span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-navbar-collapse" aria-expanded="false">
+                <span class="sr-only">ChatGot柴狗</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../index.html">
+                <img src="../../img/logo_03.png">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="header-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="">
+                    <a href="../../questions/index.html">讨论区</a>
+                </li>
+                <li class=" bootcamp new-nav logo-1111">
+                    <a href="../../bootcamp/index.html">训练营</a>
+
+                </li>
+                <li class=" new-nav logo-1111">
+                    <a href="../../vip/index.html">会员</a>
+
+                </li>
+
+            </ul>
+
+
+            <div class="navbar-right btns">
+                <a class="btn btn-default navbar-btn sign-in" data-sign="signin" href="#sign-modal" data-toggle="modal">登录</a>
+                <a class="btn btn-default navbar-btn sign-up" data-sign="signup" href="#sign-modal" data-toggle="modal">注册</a>
+            </div>
+
+
+            <form class="navbar-form navbar-right" action="../search" method="get" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="search" autocomplete="off" placeholder="搜索">
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+<script src="../../app/dest/lib/lib.js?=2016121272249"></script>
+<script src="../../static/jquery/2.2.4/jquery.min.js"></script>
+<script src="../../static/ace/1.2.5/ace.js"></script>
+<script src="../../static/aliyun/aliyun-oss-sdk-4.3.0.min.js"></script>
+<script src="../../static/highlight.js/9.8.0/highlight.min.js"></script>
+<script src="../../static/jspdf/1.2.61/jspdf.min.js"></script>
+<script src="../../static/plupload/2.1.9/js/plupload.full.min.js"></script>
+<script src="../../static/zeroclipboard/2.2.0/ZeroClipboard.min.js"></script>
+<script src="../../static/videojs/video.min.js"></script>
+<script src="../../static/bootstrap-tour/0.11.0/js/bootstrap-tour.min.js"></script>
+<script src="../../static/bootstrap-table/1.11.0/bootstrap-table.min.js"></script>
+<script src="../../static/bootstrap-table/1.11.0/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="../../static/bootstrap-table/1.11.0/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
+
+<script src="../../static/ravenjs/3.7.0/raven.min.js"></script>
+<script>
+    Raven.config('https://bc3878b7ed0a4468a65390bd79e6e73f@sentry.xxxxxx.com/5', {
+        release: '3.12.13'
+    }).install();
+</script>
+
+
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 clearfix footer-col">
+                <img src="../../img/logo_03.png" width="260">
+                <div class="footer-slogan">加入ChatGot，轻松练口语</div>
+                <div class="col-xs-2">
+                    <div class="social-item footer-weixin-item">
+                        <i class="fa fa-weixin"></i>
+                        <div class="footer-weixin">
+                            <img src="../../img/footer-weixin.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-2">
+                    <div class="social-item footer-qq-item">
+                        <i class="fa fa-qq"></i>
+                    </div>
+                </div>
+                <div class="col-xs-2">
+                    <div class="social-item footer-weibo-item">
+                        <!--                        <a href="#" target="_blank">-->
+                        <i class="fa fa-weibo"></i>
+                        <!--                        </a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-2 footer-col">
+                <div class="col-title">公司</div>
+                <a href="../../aboutus/index.html" target="_blank">关于我们</a><br>
+                <a href="../../contact/index.html" target="_blank">联系我们</a><br>
+                <a href="#" target="_blank">加入我们</a><br>
+                <a href="#" target="_blank">技术博客</a><br>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-2 footer-col">
+                <div class="col-title">合作</div>
+                <a href="../../contribute/index.html" target="_blank">我要投稿</a><br>
+                <a href="../../labs/index.html" target="_blank">教师合作</a><br>
+                <a href="../../edu/index.html" target="_blank">高校合作</a><br>
+                <a href="../../friends/index.html" target="_blank">友情链接</a>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-2 footer-col">
+                <div class="col-title">服务</div>
+                <a href="../../vip/index.html" target="_blank">会员服务</a><br>
+                <a href="../../questions/index.html?tag=%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98" target="_blank">常见问题</a><br>
+                <a href="../../privacy/index.html" target="_blank">隐私条款</a>
+            </div>
+        </div>
+    </div>
+    <div class="text-center copyright">
+        <span>Copyright @2013-2016 在线教育</span>
+        <span class="ver-line"> | </span>
+        <a href="#" target="_blank">蜀ICP备00000000号</a>
+
+    </div>
+</div>
+</body>
+</html>

@@ -12,39 +12,37 @@
 
     <title>新闻阅读</title>
     <!-- 引入jQuery -->
-    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 
-    <style>
-        .img-fluid{
-            left: 500px;
-        }
+<!--    <script type="module">-->
+<!--        window.onload = function(){-->
 
-    </style>
+<!--            $.get('titles/1.txt').then(function(content){-->
+<!--                console.log(content);-->
+<!--                $("#title").text(content)-->
+<!--            });-->
+<!--        }-->
+<!--    </script>-->
 
     <script type="text/javascript">
         $.ajax({
-            url: "titles/2.txt",
+            url: "./titles/2.txt",
             type: "GET",
             dataType: "text",
             success: function (data) {
                 $("#title").text(data);
             },
-            error: function (jqXHR, status, thrown) {
-                alert(thrown);
-            }
         });
         $.ajax({
-            url: "news/2.txt",
+            url: "./news/2.txt",
             type: "GET",
             dataType: "text",
             success: function (data) {
                 $("#news").text(data);
             },
-            error: function (jqXHR, status, thrown) {
-                alert(thrown);
-            }
         });
     </script>
+
     <meta content="" name="author">
 
     <link rel="shortcut icon" href="favicon.ico">
