@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Lei Shi">
+    <meta http-equiv="Cache-Control" content="o-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="csrf-token" content="1483780974##87f89328c5616669f00302a263fe9061bb852818">
+
+
+    <title>新闻阅读</title>
+    <!-- 引入jQuery -->
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+
+    <meta content="" name="author">
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="../../static/font-awesome//4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../static/highlight.js/9.8.0/monokai-sublime.min.css">
+    <link rel="stylesheet" href="../../app/css/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../app/css/libs/katex/0.6.0/katex.min.css">
+    <link rel="stylesheet" href="../../app/css/libs/videojs/5.11.7/video-js.min.css">
+    <link rel="stylesheet" href="../../app/css/dest/styles.css?=2016121272249">
+
+</head>
+
+<script>
+    function openShutManager(oSourceObj,oTargeObj,shutAble,oOpenTip,oShutTip){
+        var sourceObj=typeof oSourceObj=="string"?document.getElementById(oSourceObj):oSourceObj;
+        var targeObj=typeof oTargeObj=="string"?document.getElementById(oTargeObj):oTargeObj;
+        var openTip=oOpenTip||"";
+        var shutTip=oShutTip||"";
+        if(targeObj.style.display !="none"){
+            if(shutAble) return;
+            targeObj.style.display="none";
+            if(openTip&&shutTip){
+                sourceObj.innerHTML=shutTip;
+            }
+        }else{
+            targeObj.style.display="block";
+            if(openTip&&shutTip){
+                sourceObj.innerHTML=openTip;
+            }
+        }
+    }
+</script>
+
+<body>
+<div class="vip-header" style="min-height:800px;margin-left: 200px;margin-right: 200px">
+    <div class="line-and-laboratory-2">
+        <div class="container">
+            <div class="clearfix text-center item-header">
+                <span class="line"></span>
+                <span class="text-center item-title" style="font-size: 40px">第一套</span>
+                <span class="line"></span>
+            </div>
+            <audio controls="controls" loop="loop">
+                <source src="第一套听力.mp3" type="audio/mp3"></source>
+            </audio>
+            <pre style="font-size: 18px;line-height: 2;word-break: keep-all;white-space: pre-wrap;word-wrap: break-word;text-align: justify">
+　Section A
+　　Directions: In this section, you will hear three news reports. At the end of each news report, you will hear two or three questions. Both the news report and the questions will be spoken only once. After you hear a question, you must choose the best answer from the four choices marked A), B), C) and D). Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre.
+　　Questions 1 and 2 are based on the news report you have just heard.
+　　1. A) Her friend Erika. C) Her grandfather.
+　　B) Her little brother. D) Her grandmother.
+　　2. A) By taking pictures for passers-by. C) By selling lemonade and pictures.
+　　B) By working part time at a hospital. D) By asking for help on social media.
+　　Questions 3 and 4 are based on the news report you have just heard.
+　　3. A) Finding cheaper ways of highway construction.
+　　B) Generating electric power for passing vehicles.
+　　C) Providing clean energy to five million people.
+　　D) Testing the efficiency of the new solar panel.
+　　4. A) They can stand the wear and tear of natural elements.
+　　B) They can be laid right on top of existing highways.
+　　C) They are only about half an inch thick.
+　　D) They are made from cheap materials.
+　　Questions 5 to 7 are based on the news report you have just heard.
+　　5. A) Endless fighting in the region. C) Inadequate funding for research.
+　　B) The hazards from the desert. D) The lack of clues about the species.
+　　6. A) To observe the wildlife in the two national parks.
+　　B) To identify the reasons for the lions’ disappearance.
+　　C) To study the habitat of lions in Sudan and Ethiopia.
+　　D) To find evidence of the existence of the “lost lions”.
+　　7. A) Lions walking. C) Some camping facilities.
+　　B) Lions’ tracks. D) Traps set by local hunters.
+　　Section B
+　　Directions：In this section, you will hear two long conversations. At the end of each conversation, you will hear four questions. Both the conversation and the questions will be spoken only once. After you hear a question, you must choose the best answer from the four choices marked A), B), C), and D). Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre.
+　　Questions 8 to 11 are based on the conversation you have just heard.
+　　8. A) Her ‘lucky birthday’. C) Her wedding anniversary.
+　　B) A call from her dad. D) A special gift from the man.
+　　9. A) Gave her a big model plane. C) Took her on a trip overseas.
+　　B) Bought her a good necklace. D) Threw her a surprise party.
+　　10. A) The gift her husband has bought.
+　　B) The trip her husband has planned.
+　　C) What has been troubling her husband.
+　　D) What her husband and the man are up to.
+　　11. A) He will be glad to be a guide for the couple’s holiday trip.
+　　B) He will tell the women the secret if her husband agrees.
+　　C) He is eager to learn how the couple’s holiday turns out.
+　　D) He wants to find out about the couple’s holiday plan.
+　　Questions 12 to 15 are based on the conversation you have just heard.
+　　12. A) They are sensitive to the dynamics of a negotiation.
+　　B) They see the importance of making compromises.
+　　C) They know when to adopt a tough attitude.
+　　D) They take the rival’s attitude into account.
+　　13. A) They know how to adapt. C) They know when to make compromises.
+　　B) They know when to stop. D) They know how to control their emotion.
+　　14. A) They are patient. C) They learn quickly.
+　　B) They are good at expression. D) They uphold their principles.
+　　15. A) Make clear one's intentions. C) Formulate one's strategy.
+　　B) Clarify items of negotiation. D) Get to know the other side.
+　　Section C
+　　Directions: In this section, you will hear three passages. At the end of each passage, you will
+　　hear three or four questions. Both the passage and the questions will be spoken only
+　　once. After you hear a question, you must choose the best answer from the four
+　　choices marked A), B), C), D). Then mark the corresponding letter on Answer
+　　Sheet 1 with a single line through the centre.
+　　Questions 16 to 18 are based on the passage you have just heard.
+　　16. A) When America's earliest space program started.
+　　B) When the International Space Station was built.
+　　C) How many space shuttle missions there will be.
+　　D) How space research benefits people on Earth.
+　　17. A) They accurately calculated the speed of the orbiting shuttles.
+　　B) They developed objects for astronauts to use in outer space.
+　　C) They tried to meet astronauts' specific requirements.
+　　D) They tried to make best use of the latest technology.
+　　18. A) They are extremely accurate. C) They were first made in space.
+　　B) They are expensive to make. D) They were invented in the 1970s.
+　　Questions 19 to 21 are based on the passage you have just heard.
+　　19. A) It was when her ancestors came to America.
+　　B) People had plenty of land to cultivate then.
+　　C) It marked the beginning of something new.
+　　D) Everything was natural and genuine then.
+　　20. A) They believed in working for goals. C) They had all kinds of entertainment.
+　　B) They enjoyed living a living a life of ease. D) They were known to be creative.
+　　21. A) Chatting with her ancestors. C) Polishing all the silver work.
+　　B) Furnishing her country house. D) Doing needlework by the fire.
+　　Questions 22 to 25 are based on the passage you have just heard.
+　　22. A) Use a map to identify your location. C) Sit down and try to calm yourself.
+　　B) Call your family or friends for help. D) Try to follow your footprints back.
+　　23. A) You may find a way out without your knowing it.
+　　B) You may expose yourself to unexpected dangers.
+　　C) You may get drowned in a sudden flood.
+　　D) You may end up entering a wonderland.
+　　24. A) Look for food. C) Start a fire.
+　　B) Wait patiently. D) Walk uphill.
+　　25. A) Inform somebody of your plan. C) Check the local weather.
+　　B) Prepare enough food and drink. D) Find a map and a compass.
+
+            </pre>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <div class="clearfix text-center item-header">
+                <span class="line"></span>
+                <span class="text-center item-title" style="font-size: 40px">第二套</span>
+                <span class="line"></span>
+            </div>
+            <audio controls="controls" loop="loop">
+                <source src="第二套听力.mp3" type="audio/mp3"></source>
+            </audio>
+            <pre style="font-size: 18px;line-height: 2;word-break: keep-all;white-space: pre-wrap;word-wrap: break-word;text-align: justify">
+Section A
+　　Directions: In this section, you will hear three news reports. At the end of each news report, you will hear two or three questions. Both the news report and the questions will be spoken only once. After you hear a question, you must choose the best answer from the four choices marked A), B), C) and D). Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre.
+　　Questions 1 and 2 are based on the news report you have just heard.
+　　1. A) Her friend Erika. C) Her grandfather.
+　　B) Her little brother. D) Her grandmother.
+　　2. A) By taking pictures for passers-by. C) By selling lemonade and pictures.
+　　B) By working part time at a hospital. D) By asking for help on social media.
+　　Questions 3 and 4 are based on the news report you have just heard.
+　　3. A) Finding cheaper ways of highway construction.
+　　B) Generating electric power for passing vehicles.
+　　C) Providing clean energy to five million people.
+　　D) Testing the efficiency of the new solar panel.
+　　4. A) They can stand the wear and tear of natural elements.
+　　B) They can be laid right on top of existing highways.
+　　C) They are only about half an inch thick.
+　　D) They are made from cheap materials.
+　　Questions 5 to 7 are based on the news report you have just heard.
+　　5. A) Endless fighting in the region. C) Inadequate funding for research.
+　　B) The hazards from the desert. D) The lack of clues about the species.
+　　6. A) To observe the wildlife in the two national parks.
+　　B) To identify the reasons for the lions’ disappearance.
+　　C) To study the habitat of lions in Sudan and Ethiopia.
+　　D) To find evidence of the existence of the “lost lions”.
+　　7. A) Lions walking. C) Some camping facilities.
+　　B) Lions’ tracks. D) Traps set by local hunters
+Section B
+　　Directions：In this section, you will hear two long conversations. At the end of each conversation, you will hear four questions. Both the conversation and the questions will be spoken only once. After you hear a question, you must choose the best answer from the four choices marked A), B), C), and D). Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre.
+　　Questions 8 to 11 are based on the conversation you have just heard.
+　　8. A) Her ‘lucky birthday’. C) Her wedding anniversary.
+　　B) A call from her dad. D) A special gift from the man.
+　　9. A) Gave her a big model plane. C) Took her on a trip overseas.
+　　B) Bought her a good necklace. D) Threw her a surprise party.
+　　10. A) The gift her husband has bought.
+　　B) The trip her husband has planned.
+　　C) What has been troubling her husband.
+　　D) What her husband and the man are up to.
+　　11. A) He will be glad to be a guide for the couple’s holiday trip.
+　　B) He will tell the women the secret if her husband agrees.
+　　C) He is eager to learn how the couple’s holiday turns out.
+　　D) He wants to find out about the couple’s holiday plan.
+　　Questions 12 to 15 are based on the conversation you have just heard.
+　　12. A) They are sensitive to the dynamics of a negotiation.
+　　B) They see the importance of making compromises.
+　　C) They know when to adopt a tough attitude.
+　　D) They take the rival’s attitude into account.
+　　13. A) They know how to adapt. C) They know when to make compromises.
+　　B) They know when to stop. D) They know how to control their emotion.
+　　14. A) They are patient. C) They learn quickly.
+　　B) They are good at expression. D) They uphold their principles.
+　　15. A) Make clear one's intentions. C) Formulate one's strategy.
+　　B) Clarify items of negotiation. D) Get to know the other side.
+Section C
+　　Directions: In this section, you will hear three passages. At the end of each passage, you will
+　　hear three or four questions. Both the passage and the questions will be spoken only
+　　once. After you hear a question, you must choose the best answer from the four
+　　choices marked A), B), C), D). Then mark the corresponding letter on Answer
+　　Sheet 1 with a single line through the centre.
+　　Questions 16 to 18 are based on the passage you have just heard.
+　　16. A) When America's earliest space program started.
+　　B) When the International Space Station was built.
+　　C) How many space shuttle missions there will be.
+　　D) How space research benefits people on Earth.
+　　17. A) They accurately calculated the speed of the orbiting shuttles.
+　　B) They developed objects for astronauts to use in outer space.
+　　C) They tried to meet astronauts' specific requirements.
+　　D) They tried to make best use of the latest technology.
+　　18. A) They are extremely accurate. C) They were first made in space.
+　　B) They are expensive to make. D) They were invented in the 1970s.
+　　Questions 19 to 21 are based on the passage you have just heard.
+　　19. A) It was when her ancestors came to America.
+　　B) People had plenty of land to cultivate then.
+　　C) It marked the beginning of something new.
+　　D) Everything was natural and genuine then.
+　　20. A) They believed in working for goals. C) They had all kinds of entertainment.
+　　B) They enjoyed living a living a life of ease. D) They were known to be creative.
+　　21. A) Chatting with her ancestors. C) Polishing all the silver work.
+　　B) Furnishing her country house. D) Doing needlework by the fire.
+　　Questions 22 to 25 are based on the passage you have just heard.
+　　22. A) Use a map to identify your location. C) Sit down and try to calm yourself.
+　　B) Call your family or friends for help. D) Try to follow your footprints back.
+　　23. A) You may find a way out without your knowing it.
+　　B) You may expose yourself to unexpected dangers.
+　　C) You may get drowned in a sudden flood.
+　　D) You may end up entering a wonderland.
+　　24. A) Look for food. C) Start a fire.
+　　B) Wait patiently. D) Walk uphill.
+　　25. A) Inform somebody of your plan. C) Check the local weather.
+　　B) Prepare enough food and drink. D) Find a map and a compass.
+            </pre>
+            <button class="btn btn-default navbar-btn sign-up" onclick="openShutManager(this,'show1',false)">点击查看答案</button>
+            <div id="show1" style="text-align: justify; display: none">
+                <span>第一套听力答案:
+1.B) Her little brother.
+2.C) By selling lemonade and pictures.
+3.C) Providing clean energy to five million people.
+4.B) They can be laid right on top of existing highways.
+5.A) Endless fighting in the region.
+6.D) To find evidence of the existence of the “lost lions”.
+7.B) Lions’ tracks.
+8.A) Her ‘lucky birthday’.
+9.D) Threw her a surprise party.
+10.B) The trip her husband has planned.
+11.C) He is eager to learn how the couple’s holiday turns out.
+12.A) They are sensitive to the dynamics of a negotiation.
+13.B) They know when to stop.
+14.C) They learn quickly.
+15.D) Get to know the other side.
+16.D) How space research benefits people on Earth.
+17.B) They developed objects for astronauts to use in outer space.
+18.A) They are extremely accurate. 
+19.C) It marked the beginning of something new.
+20.A) They believed in working for goals.
+21.D) Doing needlework by the fire.
+22.C) Sit down and try to calm yourself.
+23.B) You may expose yourself to unexpected dangers.
+24.D) Walk uphill.
+25.A) Inform somebody of your plan.
+                    <hr></hr>
+                    第二套听力答案：
+1.B) Her little brother.
+2.C) By selling lemonade and pictures.
+3.C) Providing clean energy to five million people.
+4.B) They can be laid right on top of existing highways.
+5.A) Endless fighting in the region.
+6.D) To find evidence of the existence of the “lost lions”.
+7.B) Lions’ tracks.
+8.D) A special gift from the man.
+9.D) Threw her a surprise party.
+10.B) The trip her husband has planned.
+11.C) He is eager to learn how the couple’s holiday turns out.
+12.A) They are sensitive to the dynamics of a negotiation.
+13.B) They know when to stop.
+14.C) They learn quickly.
+15.D) Get to know the other side.
+16.D) How space research benefits people on Earth.
+17.B) They developed objects for astronauts to use in outer space.
+18.A) They are extremely accurate. 
+19.C) It marked the beginning of something new.
+20.A) They believed in working for goals.
+21.D) Doing needlework by the fire.
+22.C) Sit down and try to calm yourself.
+23.B) You may expose yourself to unexpected dangers.
+24.D) Walk uphill.
+25.A) Inform somebody of your plan.
+　　</span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-navbar-collapse" aria-expanded="false">
+                <span class="sr-only">ChatGot柴狗</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../index.html">
+                <img src="../../img/logo_03.png">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="header-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="">
+                    <a href="../../questions/index.html">讨论区</a>
+                </li>
+                <li class=" bootcamp new-nav logo-1111">
+                    <a href="../../bootcamp/index.html">训练营</a>
+
+                </li>
+                <li class=" new-nav logo-1111">
+                    <a href="../../vip/index.html">会员</a>
+
+                </li>
+
+            </ul>
+
+
+            <div class="navbar-right btns">
+                <a class="btn btn-default navbar-btn sign-in" data-sign="signin" href="#sign-modal" data-toggle="modal">登录</a>
+                <a class="btn btn-default navbar-btn sign-up" data-sign="signup" href="#sign-modal" data-toggle="modal">注册</a>
+            </div>
+
+
+            <form class="navbar-form navbar-right" action="../search" method="get" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="search" autocomplete="off" placeholder="搜索">
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+<script src="../../app/dest/lib/lib.js?=2016121272249"></script>
+<script src="../../static/jquery/2.2.4/jquery.min.js"></script>
+<script src="../../static/ace/1.2.5/ace.js"></script>
+<script src="../../static/aliyun/aliyun-oss-sdk-4.3.0.min.js"></script>
+<script src="../../static/highlight.js/9.8.0/highlight.min.js"></script>
+<script src="../../static/jspdf/1.2.61/jspdf.min.js"></script>
+<script src="../../static/plupload/2.1.9/js/plupload.full.min.js"></script>
+<script src="../../static/zeroclipboard/2.2.0/ZeroClipboard.min.js"></script>
+<script src="../../static/videojs/video.min.js"></script>
+<script src="../../static/bootstrap-tour/0.11.0/js/bootstrap-tour.min.js"></script>
+<script src="../../static/bootstrap-table/1.11.0/bootstrap-table.min.js"></script>
+<script src="../../static/bootstrap-table/1.11.0/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="../../static/bootstrap-table/1.11.0/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
+
+<script src="../../static/ravenjs/3.7.0/raven.min.js"></script>
+<script>
+    Raven.config('https://bc3878b7ed0a4468a65390bd79e6e73f@sentry.xxxxxx.com/5', {
+        release: '3.12.13'
+    }).install();
+</script>
+
+
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 clearfix footer-col">
+                <img src="../../img/logo_03.png" width="260">
+                <div class="footer-slogan">加入ChatGot，轻松练口语</div>
+                <div class="col-xs-2">
+                    <div class="social-item footer-weixin-item">
+                        <i class="fa fa-weixin"></i>
+                        <div class="footer-weixin">
+                            <img src="../../img/footer-weixin.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-2">
+                    <div class="social-item footer-qq-item">
+                        <i class="fa fa-qq"></i>
+                    </div>
+                </div>
+                <div class="col-xs-2">
+                    <div class="social-item footer-weibo-item">
+                        <!--                        <a href="#" target="_blank">-->
+                        <i class="fa fa-weibo"></i>
+                        <!--                        </a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-2 footer-col">
+                <div class="col-title">公司</div>
+                <a href="../../aboutus/index.html" target="_blank">关于我们</a><br>
+                <a href="../../contact/index.html" target="_blank">联系我们</a><br>
+                <a href="#" target="_blank">加入我们</a><br>
+                <a href="#" target="_blank">技术博客</a><br>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-2 footer-col">
+                <div class="col-title">合作</div>
+                <a href="../../contribute/index.html" target="_blank">我要投稿</a><br>
+                <a href="../../labs/index.html" target="_blank">教师合作</a><br>
+                <a href="../../edu/index.html" target="_blank">高校合作</a><br>
+                <a href="../../friends/index.html" target="_blank">友情链接</a>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-2 footer-col">
+                <div class="col-title">服务</div>
+                <a href="../../vip/index.html" target="_blank">会员服务</a><br>
+                <a href="../../questions/index.html?tag=%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98" target="_blank">常见问题</a><br>
+                <a href="../../privacy/index.html" target="_blank">隐私条款</a>
+            </div>
+        </div>
+    </div>
+    <div class="text-center copyright">
+        <span>Copyright @2013-2016 在线教育</span>
+        <span class="ver-line"> | </span>
+        <a href="#" target="_blank">蜀ICP备00000000号</a>
+
+    </div>
+</div>
+</body>
+</html>
