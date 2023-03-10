@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>签到</title>
+    <meta name="format-detection" content="telephone=no">
+    <script src="../js/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .home {
+            width: 100%;
+        }
+
+        .home h1{
+            width:100%;
+            line-height: 50px;
+            font-size:16px;
+        }
+
+        .home .thead {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .home .thead li {
+            float: left;
+            width: 14.28%;
+            font-size:14px;
+            color:#333;
+            text-align: center;
+            line-height: 36px;
+            background: #faaa30;
+        }
+
+        .home tbody>tr>td {
+            width: 14.28%;
+            color:#696969;
+            font-size:14px;
+            height: 40px;
+            /*background: #ececec;*/
+            text-align: center;
+        }
+        .btns{
+            margin:50px auto;
+            overflow: hidden;
+            width: 300px;
+        }
+        button{
+            width: 80px;
+            height: 40px;
+            left: 50px;
+            background: #ffb05f;
+            font-size:14px;
+            margin-right:8px;
+            border-radius: 5px;
+        }
+
+        #month {
+            text-align: center;
+        }
+
+        .qiandao {
+            color: #ff6a00 !important;
+            background:url("../../img/claw.png") no-repeat center center !important;
+            background-size:40px 40px !important;
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+<div class="home">
+    <h1 id="month"></h1>
+    <table cellspacing="1" cellpadding="1" class="home">
+        <ul class="thead">
+            <li>日</li>
+            <li>一</li>
+            <li>二</li>
+            <li>三</li>
+            <li>四</li>
+            <li>五</li>
+            <li>六</li>
+        </ul>
+        <tbody id="tbody"></tbody>
+    </table>
+    <div class="btns">
+        <button id="button" style="position: center">签到</button>
+        <button id="button2" style="position: center">签到天数</button>
+        <button id="button3" style="position: center">查询上月</button>
+    </div>
+
+</div>
+</body>
+<script>
+    //本地模拟已签到日期天数
+    var localDate = {
+        date: ["2018-09-11 15:11:02", "2018-09-12 15:11:02"]
+    }
+    //for (var j = 0; j < 30; j++) {
+    //    var a = Math.ceil(Math.random() * 11);
+    //    if (a < 10) {
+    //        a = "0" + a;
+    //    }
+    //    var b = Math.ceil(Math.random() * 30);
+    //    if (b < 10) {
+    //        b = "0" + b;
+    //    }
+    //    var c = a.toString() + b.toString();
+    //    localDate.date.push(c);
+    //    console.log(localDate.date);
+    //}
+
+    //初始化日期数据
+    var slidate = new Date();
+    //
+    var ye = slidate.getFullYear();
+    var me = slidate.getMonth() + 1;
+    if (me < 10) {
+        me = "0" + me;
+    }
+    //
+    var x = slidate.getMonth() + 1;
+    var n = slidate.getMonth();
+    var monthFirst = new Date(slidate.getFullYear(), parseInt(n), 1).getDay(); //获取当月的1日等于星期几
+    var m = slidate.getMonth() + 1;
+    var d = new Date(slidate.getFullYear(), parseInt(m), 0); //获取月
+    var conter = d.getDate(); //获取当前月的天数
+    //var monthNum = "0" + (slidate.getMonth() + 1) + "月";
+    var monthNum = ye + "-" + me;
+    var monthCheck = (slidate.getMonth() + 1);
+    var y = slidate.getDate();
+
+    function initall() {
+        dateHandler(monthFirst, d, conter, monthNum);
+        checkDate(me);
+    }
+
+    function dateHandler(monthFirst, d, conter, monthNum) {
+        var u = 1;
+        var blank = true;
+        var $tbody = $('#tbody'),
+            $month = $("#month"),
+            _nullnei = '';
+        var p = document.createElement("p");
+        var monthText = document.createTextNode(monthNum);
+        p.appendChild(monthText);
+        $month.append(p);
+        //遍历日历网格
+        for (var i = 1; i <= 6; i++) {
+            _nullnei += "<tr>";
+            for (var j = 1; j <= 7; j++) {
+                _nullnei += '<td></td>';
+            }
+            _nullnei += "</tr>";
+        }
+        $tbody.html(_nullnei);
+
+        //遍历网格内容
+        var $slitd = $tbody.find("td");
+        for (var i = 0; i < conter; i++) {
+            $slitd.eq(i + monthFirst).html("<p>" + parseInt(i + 1) + "</p>")
+        }
+        //给有日期的td加上id
+        var dayBlock = document.getElementsByTagName("td");
+        for (var i = 0; i < dayBlock.length; i++) {
+            if (dayBlock[i].textContent != "") {
+                dayBlock[i].setAttribute("id", "td" + u);
+                u++;
+            }
+        }
+        //若日期不足排满每一行的tr，则删除最后一个tr
+        var blankTr = document.getElementsByTagName("tr");
+        var blankTd = blankTr[5].getElementsByTagName("td");
+        for (var i = 0; i < blankTd.length; i++) {
+            if (blankTd[i].textContent != "") {
+                blank = false;
+            }
+        }
+        if (blank == true) {
+            blankTr[5].remove();
+        }
+    }
+
+    function checkDate(prep) {
+        var dateArray = [];
+        var newArray = [];
+        //删除不是本月的日期
+        for (var i = 0; i < localDate.date.length; i++) {
+            dateArray.push(localDate.date[i]);
+        }
+        for (var i = 0; i < dateArray.length; i++) {
+            if (dateArray[i].substr(5, 2) != prep) {
+                dateArray[i] = undefined;
+            }
+        }
+        for (var i = 0; i < dateArray.length; i++) {
+            if (dateArray[i] != undefined) {
+                newArray.push(dateArray[i]);
+            }
+        }
+        //遍历数组为已签到日期添加class
+        for (var i = 0; i < newArray.length; i++) {
+            if (newArray[i].charAt(8) == 0) {
+                for (var j = 0; j < 10; j++) {
+                    if (newArray[i].charAt(9) == j) {
+                        var checked = "#td" + j;
+                        $(checked).addClass("qiandao");
+                    }
+                }
+            } else if (newArray[i].charAt(8) == 1) {
+                for (var j = 0; j < 10; j++) {
+                    if (newArray[i].charAt(9) == j) {
+                        var checked = "#td1" + j;
+                        $(checked).addClass("qiandao");
+                    }
+                }
+            } else if (newArray[i].charAt(8) == 2) {
+                for (var j = 0; j < 10; j++) {
+                    if (newArray[i].charAt(9) == j) {
+                        var checked = "#td2" + j;
+                        $(checked).addClass("qiandao");
+                    }
+                }
+            } else {
+                for (var j = 0; j < 10; j++) {
+                    if (newArray[i].charAt(9) == j) {
+                        var checked = "#td3" + j;
+                        $(checked).addClass("qiandao");
+                    }
+                }
+            }
+        }
+    }
+    //当天签到添加样式
+    $("#button").on("click", function () {
+        $("tr").remove();
+        $("#month p").remove();
+        dateHandler(monthFirst, d, conter, monthNum);
+        checkDate(monthCheck);
+        var thisDay = "#td" + y;
+        var checkPic = false;
+        //if (m > 10 && y < 10) {
+        //    var thisBlock = m.toString() + y.toString();
+        //} else if (m < 10 && y > 10) {
+        //    var thisBlock = "0" + m.toString() + y.toString();
+        //} else if (m > 10 && y < 10) {
+        //    var thisBlock = m.toString() + "0" + y.toString();
+        //} else if (m < 10 && y < 10) {
+        //    var thisBlock = "0" + m.toString() + "0" + y.toString();
+        //}
+        var NowTime = GetDate();
+        for (var e = 0; e < localDate.date.length; e++) {
+            if (localDate.date[e].substr(0, 10) === NowTime.substr(0, 10)) {
+                checkPic = true;
+            }
+        }
+        if (checkPic == true) {
+            //alert("您今天已经签到了！");
+            layer.msg("您今天已经签到了！");
+        } else {
+            $(thisDay).addClass("qiandao");
+            //alert("已签到！");
+            layer.msg("签到成功");
+            localDate.date.push(NowTime);
+            console.log(localDate.date);
+        }
+    })
+
+    //查询已签到天数
+    $("#button2").on("click", function () {
+        alert("您已经签到了" + localDate.date.length + "天！");
+    })
+    //查询历史记录
+    $("#button3").on("click", function () {
+        $("tr").remove();
+        $("#month p").remove();
+        if(m < 2){
+            ye = ye - 1;
+            m = 12;
+            n = 11;
+        }
+        else{
+            m-- , n--;
+        }
+        if (m < 10) {
+            var m_1 = "0" + m;
+        }
+        else {
+            var m_1 = m;
+        }
+        var monthFirst = new Date(ye, parseInt(n), 1).getDay(); //获取当月的1日等于星期几
+        var d = new Date(ye, parseInt(m), 0); //获取月
+        var conter = d.getDate(); //获取当前月的天数
+        var monthNum = ye + "-" + m_1;
+        var monthCheck = m_1;
+        dateHandler(monthFirst, d, conter, monthNum);
+        checkDate(monthCheck);
+    })
+    //返回上月记录
+    $("#button4").on("click", function () {
+        $("tr").remove();
+        $("#month p").remove();
+        if(ye > slidate.getFullYear()){
+            return false;
+        }
+        if(ye < slidate.getFullYear()){
+            ye = ye + 1;
+            if(m == 12){
+                m = 1;
+                n = 0;
+            }
+            else{
+                m++ , n++;
+            }
+        }
+        if(ye == slidate.getFullYear()){
+            if (m < x) {
+                m++ , n++;
+            }
+        }
+        if (m < 10) {
+            var m_1 = "0" + m;
+        }
+        else {
+            var m_1 = m;
+        }
+        var monthFirst = new Date(slidate.getFullYear(), parseInt(n), 1).getDay(); //获取当月的1日等于星期几
+        var d = new Date(slidate.getFullYear(), parseInt(m), 0); //获取月
+        var conter = d.getDate(); //获取当前月的天数
+        var monthNum = ye + "-" + m_1;
+        var monthCheck = m_1;
+        dateHandler(monthFirst, d, conter, monthNum);
+        checkDate(monthCheck);
+    })
+
+    //日期格式
+    function GetDate() {
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var day = date.getDate();
+        var hour = date.getHours();
+        var minutes = date.getMinutes();
+        var second = date.getSeconds();
+        if (month < 10) {
+            month = "0" + month;
+        }
+        if (day < 10) {
+            day = "0" + day;
+        }
+        hour < 10 ? hour = '0' + hour : hour;
+        minutes < 10 ? minutes = '0' + minutes : minutes;
+        second < 10 ? second = '0' + second : second;
+        var nowDate = year + "-" + month + "-" + day + " " + hour + ":" + minutes + ":" + second;
+        return nowDate;
+    };
+
+    window.addEventListener("load", initall, false);
+
+</script>
+</html>
